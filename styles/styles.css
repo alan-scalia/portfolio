@@ -123,13 +123,37 @@ footer {
   opacity: 0.8;
 }
 
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .section {
-    padding: 40px 0;
+  body {
+    padding-top: 56px;
   }
-  
+  .video-section {
+    height: 60vh;
+  }
+  .video-content {
+    padding: 0 10px;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .section {
+    padding: 20px 0;
+  }
+  .navbar {
+    font-size: 0.95em;
+  }
   .social-links {
-    gap: 20px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .social-links img {
+    width: 20px;
+    height: 20px;
+  }
+  footer {
+    padding-top: 0;
+    padding-bottom: 14px;
+    font-size: 0.95em;
   }
 }
