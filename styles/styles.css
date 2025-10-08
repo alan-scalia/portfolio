@@ -1,4 +1,4 @@
-/* Configuración para sticky footer con Flexbox */
+/* Estilos generales */
 html {
   height: 100%;
 }
@@ -6,28 +6,35 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Altura mínima de la ventana */
+  min-height: 100vh;
   margin: 0;
-  padding-top: 70px; /* Espacio para la navbar fija */
+  padding-top: 70px;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+/* Sección principal */
 .section {
-  flex: 1 0 auto; /* El contenido principal crece para llenar espacio */
+  flex: 1 0 auto;
   padding: 60px 0;
 }
 
+/* Navbar */
 .navbar {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Cards */
 .card {
   transition: transform 0.3s;
+  margin-bottom: 20px;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
+/* Botones */
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
@@ -38,23 +45,31 @@ body {
   border-color: #0056b3;
 }
 
+/* Footer y redes sociales */
 footer {
-  flex-shrink: 0; /* Evita que el footer se comprima */
+  flex-shrink: 0;
   width: 100%;
-  background-color: #343a40; /* Coincide con bg-dark */
+  background-color: #343a40;
   color: white;
   text-align: center;
   padding: 20px 0;
-  position: fixed; /* Fija el footer al fondo */
-  bottom: 0; /* Lo coloca en la parte inferior */
-  left: 0; /* Asegura que comience desde el borde izquierdo */
-  right: 0; /* Asegura que llegue hasta el borde derecho */
+  margin-top: auto;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 15px;
 }
 
 .social-links a {
-  display: inline-block;
-  margin: 0 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
+  padding: 5px;
 }
 
 .social-links img {
@@ -68,14 +83,13 @@ footer {
   opacity: 0.8;
 }
 
-/* Ajuste para evitar que el contenido quede detrás del footer */
-body {
-  margin-bottom: 60px; /* Altura del footer */
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .section {
     padding: 40px 0;
+  }
+  
+  .social-links {
+    gap: 20px;
   }
 }
