@@ -8,26 +8,49 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  padding-top: 70px;
+  padding-top: 56px;
   background-color: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #111;
 }
 
 /* Video de fondo */
-.video-background {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  object-fit: cover;
-  opacity: 0.4; /* Más visible */
+
+/* Sección de video de fondo */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Sección principal */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.video-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  color: #111;
+  text-shadow: none;
+}
+
+/* Sección principal debajo del video */
 .section {
   flex: 1 0 auto;
   padding: 60px 0;
@@ -36,7 +59,9 @@ body {
 
 /* Navbar */
 .navbar {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: none;
+  background-color: #212529 !important;
+  border: none;
 }
 
 /* Cards */
