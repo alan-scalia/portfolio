@@ -45,6 +45,24 @@ footer {
   color: white;
   text-align: center;
   padding: 20px 0;
+  position: fixed; /* Fija el footer al fondo */
+  bottom: 0; /* Lo coloca en la parte inferior */
+  left: 0; /* Asegura que comience desde el borde izquierdo */
+  right: 0; /* Asegura que llegue hasta el borde derecho */
+}
+
+.social-links a {
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #007bff !important;
+}
+
+/* Ajuste para evitar que el contenido quede detrás del footer */
+body {
+  margin-bottom: 60px; /* Altura del footer */
 }
 
 /* Responsive adjustments */
